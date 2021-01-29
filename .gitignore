@@ -1,0 +1,68 @@
+# =============== #
+# Unity generated #
+# =============== #
+[Tt]emp/
+[Tt]mp/
+[Oo]bj/
+[Bb]uild
+@ -8,66 +5,17 @@
+[Ll]ibrary/
+sysinfo.txt
+*.stackdump
+*.csproj
+*.lock
+*.ide-shm
+*.colors
+*.info
+*.log
+ 
+# ===================================== #
+# Visual Studio / MonoDevelop generated #
+# ===================================== #
+[Ee]xported[Oo]bj/
+.vs/
+/*.userprefs
+/*.csproj
+/*.pidb
+/*.suo
+/*.sln*
+/*.user
+/*.unityproj
+/*.booproj
+Logs
+
+# Visual Studio Code
+.vscode
+ 
+# ============ #
+# OS generated #
+# ============ #
+.DS_Store*
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+[Tt]humbs.db
+
+# ====== #
+# Builds #
+# ====== #
+*.apk
+*.unitypackage
+*.app
+# ===== #
+# Other #
+# ===== #
+*.mwb.bak
+*.zip
+
+# ======================= #
+# Exceptions - Save files #
+# ======================= #
+!*.obj
+!*.lib
+!*.dll
+!*.exp
+/Assets/Store/_repo1
+/Assets/Store/_repo2
