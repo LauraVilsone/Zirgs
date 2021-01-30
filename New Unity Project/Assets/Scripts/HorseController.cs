@@ -5,10 +5,45 @@ using UnityEngine;
 public class HorseController : MonoBehaviour
 {
 
+	bool isSpace;
+	private void Update()
+	{
+		isSpace = Input.GetKey(KeyCode.Space);
+	}
+
 	private void OnTriggerEnter(Collider other)
 	{
+		if (other.name == "CatBack")
+		{
+			//TODO scare cat
+			CatController cat = other.GetComponentInParent<CatController>();
+			if (!cat)
+				return;
 
-		if (!Input.GetKey(KeyCode.Space))
+			cat.Warning();
+			return;
+		}
+	}
+
+
+
+	private void OnTriggerExit(Collider other)
+	{
+		if (other.name == "CatBack")
+		{
+			//TODO scare cat
+			CatController cat = other.GetComponentInParent<CatController>();
+			if (!cat)
+				return;
+
+			cat.WarningEnd();
+			return;
+		}
+	}
+	private void OnTriggerStay(Collider other)
+	{
+
+		if (!isSpace)
 			return;
 
 		if (other.name == "Cat")

@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -6,7 +7,9 @@ public class CatController : MonoBehaviour
 {
 	bool gotoHome;
 
-  public void GotoHome()
+	Animator anim => GetComponent<Animator>();
+
+	public void GotoHome()
 	{
 		Debug.Log("Cat go home");
 
@@ -15,7 +18,6 @@ public class CatController : MonoBehaviour
 
 		gotoHome = true;
 
-		Animator anim  = GetComponent<Animator>();
 		anim.SetBool("Runing", true);
 		anim.SetTrigger("Home");
 
@@ -25,16 +27,25 @@ public class CatController : MonoBehaviour
 
 	}
 
+	internal void Warning()
+	{
+		anim.SetBool("Warning", true);
+	}
+
+	internal void WarningEnd()
+	{
+		anim.SetBool("Warning", false);
+	}
+
 	void PathEnded()
 	{
-		Animator anim = GetComponent<Animator>();
 		anim.SetBool("Runing", false);
 	}
 
 	public void Scare()
 	{
-		Debug.Log("Cat is scared");
-
+		//Debug.Log("Cat is scared");
+		anim.SetTrigger("Scare");
 	}
 
 }
