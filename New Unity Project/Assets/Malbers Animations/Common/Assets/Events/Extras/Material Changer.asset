@@ -14,8 +14,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   Description: 'Changes to the Next Materials on the Animal
 
-    String Response : The Name of the Material Item to change
+    String Response
+    : The Name of the Material Item to change
 
     Connection:
 
-    MaterialChanger.NextMaterialItem(String) *Dynamic'
+    MaterialChanger.NextMaterialItem(String)
+    *Dynamic'
+  debug: 0
