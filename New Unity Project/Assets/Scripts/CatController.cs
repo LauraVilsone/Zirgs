@@ -44,6 +44,7 @@ public class CatController : MonoBehaviour
 
 	public void Scare()
 	{
+
 		//Debug.Log("Cat is scared");
 		anim.SetTrigger("Scare");
 	}
